@@ -13,12 +13,12 @@ public:
             auto isAvailable = [&](int seat) {
                 return bookedSeats.find(seat) == bookedSeats.end();
             };
-            bool graupA = isAvailable(2) && isAvailable(3) && isAvailable(4) & isAvailable(5);
-            bool graupB = isAvailable(4) && isAvailable(5) && isAvailable(6) & isAvailable(7);
-            bool graupC = isAvailable(6) && isAvailable(7) && isAvailable(8) & isAvailable(9);
-            if(graupA && graupC)
+            bool groupA = isAvailable(2) && isAvailable(3) && isAvailable(4) & isAvailable(5);
+            bool groupB = isAvailable(4) && isAvailable(5) && isAvailable(6) & isAvailable(7);
+            bool groupC = isAvailable(6) && isAvailable(7) && isAvailable(8) & isAvailable(9);
+            if(groupA && groupC)
                 result += 2;
-            else if(graupA || graupB || graupC)
+            else if(groupA || groupB || groupC)
                 result += 1;
 
         }
